@@ -5,6 +5,7 @@
 ### tmux
 
 Ctrl + b +
+
 	% vertical " horizontal split
 	o switch pane
 	x kill pane
