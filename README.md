@@ -1,6 +1,6 @@
-# Evolve
+# Cybersecurity Notes
 
-## Linux
+## General Linux
 
 ### tmux
 
@@ -16,4 +16,10 @@ Ctrl + b +
 	, name window
 	& kill window
 	[#] switch to window #
-	
+
+## Pentesting Tools
+
+### nmap
+
+nmap [flags] filename ip.ad.dre.ss:port
+
