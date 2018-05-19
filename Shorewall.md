@@ -75,4 +75,12 @@ Installation configures your system to start shorewall at system boot, but start
 
 The firewall is started using `shorewall start` and stopped using `shorewall stop`. Routing is enabled when the firewall is stopped on hosts with an entry in /routestopped and /stoppedrules. A running firewall can be restarted with `shorewall reload`.  If you want to remove any trace of shorewall from netfilter config, use `shorewall clear`. 
 
-If you are connected to the firewall from the internet, do not issue `shorewall stop` unless you have set ADMINABSENTMINDED=Yes in /shorewall.conf, or added an entry for the IP you are connected from to /routestopped. `shorewall reload` is not recommended, it is better to create alternative configuration and test with `shorewall try`. 
+If you are connected to the firewall from the internet, do not issue `shorewall stop` unless you have set ADMINABSENTMINDED=Yes in /shorewall.conf, or added an entry for the IP you are connected from to /routestopped. `shorewall reload` is not recommended, it is better to create alternative configuration and test with `shorewall try`.
+
+I had to reconfigure to use Serial Port on windows - just making a quick note here that what I had to do was shut down the kali virtualbox, go into settings, enable PORT 3 and call it COM3, then go into linux and use it as /dev/ttyS2. If you have to shut down the serial port, for whatever reason you must reboot the virtual machine after.
+
+copy sample files by cding into /usr/share/doc/shorewall/Samples/two-interface and using cp (file, file) /etc/shorewall.
+
+Edit the files according to your preferences after reading prior document. 
+
+
