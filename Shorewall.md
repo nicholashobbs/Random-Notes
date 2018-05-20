@@ -81,6 +81,12 @@ I had to reconfigure to use Serial Port on windows - just making a quick note he
 
 copy sample files by cding into `/usr/share/doc/shorewall/Samples/two-interface` and using `cp (file, file) /etc/shorewall`.
 
-Edit the files according to your preferences after reading prior document. 
+Edit the files according to your preferences after reading prior document. I only made a few simple changes, including adding `DNS(ACCEPT) loc $FW` to `/rules`. 
 
+After I tried `shorewall start`, I started getting some very confusing messages. My espressobin seems to have some connection issue where text occasionally gets garbled. This was happening along with the following messages:
 
+`IPv4: martian source 192.168.1.114 from 192.168.1.1, on dev wan`
+
+`nf_conntrack: default automatic helper assignment has been turned off for security reasons and CT-based  firewall rule not found. Use the iptables CT target to attach helpers instead.`
+
+I decided to just keep moving, and continue my notes in Router.md
