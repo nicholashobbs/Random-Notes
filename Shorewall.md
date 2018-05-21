@@ -1,4 +1,4 @@
-Instructions to configure shorewall with a Linux system as a firewall/router, with a single IP.
+
 
 I will refer to files in `/etc/shorewall/` as just `/file`
 
@@ -77,16 +77,25 @@ The firewall is started using `shorewall start` and stopped using `shorewall sto
 
 If you are connected to the firewall from the internet, do not issue `shorewall stop` unless you have set `ADMINABSENTMINDED=Yes` in `/shorewall.conf`, or added an entry for the IP you are connected from to `/routestopped`. `shorewall reload` is not recommended, it is better to create alternative configuration and test with `shorewall try`.
 
-I had to reconfigure to use Serial Port on windows - just making a quick note here that what I had to do was shut down the kali virtualbox, go into settings, enable PORT 3 and call it COM3, then go into linux and use it as `/dev/ttyS2`. If you have to shut down the serial port, for whatever reason you must reboot the virtual machine after.
+I had to reconfigure to use Serial Port on windows - just making a quick note here that what I had to do was shut down the kali virtualbox, go into settings, enable PORT 3 and call it COM3, then go into linux and use it as `/dev/ttyS2`. If you have to shut down the serial port, for whatever reason you must reboot the virtual machine after. *note* I have had a difficult time with the device working properly on every machine I have used it with. The text gets jarbled and seems to overwrite itself and not write correctly to the console for whatever reason. 
 
 copy sample files by cding into `/usr/share/doc/shorewall/Samples/two-interface` and using `cp (file, file) /etc/shorewall`.
 
-Edit the files according to your preferences after reading prior document. I only made a few simple changes, including adding `DNS(ACCEPT) loc $FW` to `/rules`. 
+Edit the files according to your preferences after reading prior document. 
+
+Before changing settings in shorewall, 
+
+- assign the LAN interface a static IP and enable IP forwarding, masquerading in `etc/systemd/network/br0.network`	
+
+- confirm that the WAN facing interface will request an address from the ISP in `/etc/systemd/network/wan.network`
+
+I only made a few simple changes, including adding `DNS(ACCEPT) loc $FW` to `/rules` and adding `wan ipv4` and `br0 local` to `/zones`
 
 After I tried `shorewall start`, I started getting some very confusing messages. My espressobin seems to have some connection issue where text occasionally gets garbled. This was happening along with the following messages:
 
 `IPv4: martian source 192.168.1.114 from 192.168.1.1, on dev wan`
 
-`nf_conntrack: default automatic helper assignment has been turned off for security reasons and CT-based  firewall rule not found. Use the iptables CT target to attach helpers instead.`
+A martian packet is a packet which comes from an impossible source - for example something from an RFC 1918 address which is routed accross the internet, or any packet with localnet IP on an interface which is not the loopback.
 
-I decided to just keep moving, and continue my notes in Router.md
+
+`nf_conntrack: default automatic helper assignment has been turned off for security reasons and CT-based  firewall rule not found. Use the iptables CT target to attach helpers instead.`
