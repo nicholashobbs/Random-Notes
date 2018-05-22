@@ -5,16 +5,20 @@
 This file should be built as follows - start hard and jump to easy, but also cover things progressively as you go. Start with a high level description of what something is, then move on to more detail as you go. First create a complete listing of the things which you now know and want to learn before the end of class, and then transform it into a complete lesson plan whereby students are initially introduced to everything and told the capabilities of different tools - as time goes by they will be introduced and gradually exposed to the deeper levels of these tools.
 
 `[]` - refers to something that should be replaced by any user-specified value
-`<>` - contains a list of possible options, such as flags 
+`<>` - has other abstract things, such as buttons you should press to execute a command 
 
 ## General Linux
 
 ### Basic Commands
 
 `pwd` - print working directory (where are you in the filesystem)
+
 `sudo` - do this action as the root user - use `sudo -i` to change your identity to sudo
+
 `[command] !!` - prepend command to prior command - useful when you forget to `sudo` previous command with `sudo !!`
+
 `cd [directory]` -  move to directory
+
 `ls <-la>` - list files in current directory. Option l is for a 'long' listing, which shows permissions and other details, a shows all files, including those which begin with . which are usually hidden.
 `Tab` - use tab-completion to complete a name based on what you have typed so far. If there are more than one option, tab twice to list available options
 `ln /file/path /link/path` - creates a hard link from file path to link path
@@ -44,7 +48,7 @@ This file should be built as follows - start hard and jump to easy, but also cov
 `ip` - contains a variety of tools for information about internet connection - link for setting up/down interfaces, addr for displaying current setup, etc
 `find / -name this` - a basic tool for finding things in linux file system, this syntax finds a file called name. Other options include `-wholename`, which searches for directories in addition to files themselves
 `grep` - a much more powerful tool for searching - option -r allows you to recursively search a directory for files containing a string
-`awk` - another utility for finding things in linux which in its simples form can print something , e.g. `awk {print} /this/file` prints this file, `awk /match/ /in/here prints lines with match in here, `/^match/` prints lines which begin with match
+`awk` - another utility for finding things in linux which in its simples form can print something , e.g. `awk {print} /this/file` prints this file, `awk /match/ /in/here` prints lines with match in here, `/^match/` prints lines which begin with match
 `sed` - allows you to modify a file from command line automatically - more on this later
 `kill process` - a utility for killing processes which are running - priority can be set with numbers - e.g. `kill 9 process` is the most harsh version which kills the process no matter what
 `sort` - sorts things by lines or other ways depending on options
@@ -58,14 +62,52 @@ This file should be built as follows - start hard and jump to easy, but also cov
 
 `CTRL+A` - jump to beginning of line
 `CTRL+E` - jump to the end of the line
-`CTRL+L` - same as `clear`, etc`
+`CTRL+L` - same as `clear`
 
 ### Filesystem
 
 ### vim
 
+Vim is a version of vi with more features. Vi is useful because it is found on almost every distribution of linux and therefore on almost every server. One of the major differences between the two is that you can use arrow keys in vim, whereas vi requires h-left, j-down, k-up, l-right 
 
+Before anything else, realize that vim has an edit mode and a command mode. Edit modes are accessed by pressing a letter, most generally i for 'insert mode'. There is also v for visual mode. You can always go back to command mode by clicking `esc`. Commands always begin with `:`. `:x` exits and saves the file.`:w`writes the file, `:q` quits (exits the file). `:x` is the same as `:wq`. `:q!` allows you to quit without saving. Clicking `R` from navigation mode will let you replace text by overwriting it.
 
+`:vsplit /path/to/doc` opens another document and splits the screen so you can see both.
+`:y` copies, `:p` pastes, `:yy` copies a line, `:dd` cuts a line
+In navigation/command mode, use x to delete the letter that the cursor is currently on.
+Use A to skip to the end of the line and insert (append)
+w lets you skip between words, and dw lets you delete the rest of the word your cursor is currently on. d$ lets you delete the rest of the current line.
+
+press u to undo a command. and CTRL+R to redo once you have undone it
+p puts previously deleted text - for example you can delete a line with dd and then replace it below the cursor with dd
+
+r+[character] lets you replace the character the cursor is on with the character you type in
+
+ce changes until the end of the word - this deletes the rest of the current word and puts you into edit mode. 
+
+CTRL+G shows you your current location in the file - line x out of total
+
+gg returns you to the beginning of the file and ## G returns you to the ##th line
+
+/thisphrase searches the current file for thisphrase - once you have found it, use n to go to the next instance of the same thing
+
+% allows you to find the matching parentheses - get your cursor to the opening parentheses and then it should skip to the matching closing bracket
+
+:%s/old/new/g to replace old with new throughout the file - make it gc to ask for confirmation each time, and use #,# in place of % to only do it for lines # to #
+
+:! allows you to execute any external shell commans
+
+use v (visual selection) to select a number of lines - then do a command on these lines - eg, d for delete, y for yank, etc. 
+
+:r FILE will insert (retrieve) the contents of file below the cursor - use :r !command to output the result of command
+
+o opens a line below the cursor and puts you in insert mode - O opens a line above the cursor and puts you in insert mode. 
+
+:set lets you set options - for example, with /findthis, you can :set ic to ignorecase or hls (highlight search). Prepend no to shut off the option
+
+set options for vim in ~/.vimrc
+
+:help shows you a manual page with various pieces of guidance
 ### Searching
 
 ### Hard Drive Utilities and Partitioning
