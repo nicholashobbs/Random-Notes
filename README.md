@@ -143,7 +143,14 @@ o opens a line below the cursor and puts you in insert mode - O opens a line abo
 
 set options for vim in ~/.vimrc
 
+#### Options
+
+I wanted to add a minimap like sublime text and vim nerdtree
+
+
+
 :help shows you a manual page with various pieces of guidance
+
 ### Searching
 
 ### Hard Drive Utilities and Partitioning
@@ -202,6 +209,8 @@ Ctrl + b +
 ### nmap
 
 nmap [flags] filename ip.ad.dre.ss:port
+
+
 
 ## Kali
 
