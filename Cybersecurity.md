@@ -210,7 +210,26 @@ Ctrl + b +
 
 nmap [flags] filename ip.ad.dre.ss:port
 
+`nmap -sP 10.0.0.0/24` ping scans the network
+`nmap -p 1-65535` - specify ports to be scanned - there are other port options available, such as excluding ports, not randomizing, fast scan, and scanning the top ports
 
+`-sS` SYN scan - the default and most popular scan option because it is relatively stealthy - it never completes a TCP connection and works against any compliant TCP stack
+`-sY` SCTP INIT scan - SCTP is a new alternative to TCP and UDP which adds new features and combines many of their characteristics.
+`-sN, -sF, -sX` - these scans differentiate between open and closed using a loophole in TCP definition in RFC 793. The xmas scan is the most popular of these, which sends the FIN, PSH, and URG flags "lighting up the packet like a christmas tree"
+`-sA` - doesn't determine open or filtered, just used to map out firewall rulesets, determining whether they are stateful or not and which ports are filtered
+`--scanflags` allows you to design your own scan by specifying arbitrary TCP flags
+`-sZ` is an SCTP cookie echo scan - not as obvious as a
+`-v` - verbose output
+`-T#` - timing - higher is faster and less accurate
+
+`-sV` - service and version info - more options available
+`-o` - output options: includes normal (N), xml (X), script kiddie (S), greppable (G), three major at once (A)
+`-O` - OS detection
+`-sU` - does a udp scan
+`-sC` - uses the default script
+`--script <filename>` allows you to write and use scripts written in NSE (nmap scripting engine)
+
+response rate limiting is an effective deterrent to nmapping of your networks, since it makes all scans take much longer to complete.
 
 ## Kali
 
