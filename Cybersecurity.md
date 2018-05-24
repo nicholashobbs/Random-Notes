@@ -2,7 +2,9 @@
 
 ## Conventions
 
-This file should be built as follows - start hard and jump to easy, but also cover things progressively as you go. Start with a high level description of what something is, then move on to more detail as you go. First create a complete listing of the things which you now know and want to learn before the end of class, and then transform it into a complete lesson plan whereby students are initially introduced to everything and told the capabilities of different tools - as time goes by they will be introduced and gradually exposed to the deeper levels of these tools.
+To start, I am just going to regurgitate everything into this file in a somewhat organized fashion. Once I get all of my notes down here and have everything condensed, I can go back and make flashcards, find gaps, organize it, and put it into a hierarchy guiding how it should be learned.
+
+Ultimately, the progression of materials should be built as follows - start hard and jump to easy, but also cover things progressively as you go. Start with a high level description of what something is, then move on to more detail as you go. First create a complete listing of the things which you now know and want to learn before the end of class, and then transform it into a complete lesson plan whereby students are initially introduced to everything and told the capabilities of different tools - as time goes by they will be introduced and gradually exposed to the deeper levels of these tools.
 
 `[]` - refers to something that should be replaced by any user-specified value
 `<>` - has other abstract things, such as buttons you should press to execute a command
@@ -94,7 +96,7 @@ This file should be built as follows - start hard and jump to easy, but also cov
 `history` - shows you the last 500 commands you have done - you can set this to more by:
 
 
-### Hotkeys
+### Terminal Hotkeys
 
 `CTRL+A` - jump to beginning of line
 `CTRL+E` - jump to the end of the line
@@ -201,9 +203,21 @@ Stands for global regex print
 
 Options - `-i` case insensitive, `-w` whole word (not part of larger word), `-r` recursively through subfolders, `-v` inverse search (prints everything but what you searched for),
 
-### Hard Drive Utilities and Partitioning
+#### find
 
+`-name` lets you look for files by name, `-wholename` includes directories in this search.
 
+### Hard Drive Utilities, Partitioning and Other Stuff
+
+`umount` unmounts a filesystem
+
+`fsck` filesystem check is used to check a drive for inconsistencies
+
+`badblocks`is used to find bad sectors on a hard disk
+
+`dd if=/from/here of=/to/here bs=1M` is used to convert and copy files - especially copying
+
+`shred` is used for overwriting a hard disk with random data - this is useful for preventing forensic analysis and file-carving, for instance.
 
 ### Compiling and Installing
 
@@ -211,9 +225,7 @@ Options - `-i` case insensitive, `-w` whole word (not part of larger word), `-r`
 
 ### Backups
 
-### SSH Plans
-
-### Networking Tools
+### Network Tools
 
 #### TCP/IP
 
@@ -326,6 +338,46 @@ ncat can route connections through SOCKS or HTTP proxies using `--proxy <proxyho
 
 
 ## Kali
+
+### Burp Suite
+
+Burp is designed to be used alongside a browser. It functions as a HTTP proxy server - all HTTP/HTTPS traffic from your browser passes through burp. Your browser must be configured before doing anything else with burp.
+
+**Getting Started:** Make sure the proxy listener is active and working  - check under Proxy > Options in Burp Suite to ensure 127.0.0.1:8080 is listening. Follow the instructions here https://portswigger.net/burp/help/suite_gettingstarted to configure the proxy in your browser. Install the burp certificate authority SSL certificate. Close all browswer windows, and check it is working by forwarding and turning the intercept on and off.
+
+Items that have been requested are shown in black, and other are gray. The core of the workflow is the ability to pass HTTP requests between the various burp tools to carry out particular tasks. Select messages and use the context menu to send the request to another tool.
+
+#### Point-and-Click Scanner
+
+
+
+####Spider
+
+Used for automatically crawling an application to discover content and functionality
+
+#### Scanner
+
+Used for automatically scanning HTTP requests to find security vulnerabilities
+
+#### Intruder
+
+Lets you perform customized automated attacks
+
+#### Repeater
+
+Used to manually modify and reissue HTTP requests repeatedly
+
+#### Sequencer
+
+Analyze the quality of randomness in application's session tokens
+
+#### Decoder
+
+Lets you transform bits of application data using common schemes
+
+#### Comparer
+
+Performs visual comparison of bits of application data to find interesting differences
 
 ### Recon-ng
 
