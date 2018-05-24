@@ -143,17 +143,67 @@ o opens a line below the cursor and puts you in insert mode - O opens a line abo
 
 set options for vim in ~/.vimrc
 
-#### Options
-
-I wanted to add a minimap like sublime text and vim nerdtree
-
-
-
-:help shows you a manual page with various pieces of guidance
-
 ### Searching
 
+#### regex
+
+##### Characters
+
+`\d \D` digit/nondigit character
+
+`\w \W` word/nonword character
+
+`\s \S` space/nonspace character
+
+##### Quantifiers
+
+`+` one or more of preceding character
+
+{x} exactly x times
+
+{x,y} x to y times
+
+`{x,}` x or more times
+
+`*` more than once
+
+`?` once or none
+
+##### Logical
+
+`|` OR
+
+`(...)` capturing group?
+
+`(?:...)` noncapturing group?
+
+`\1` contents of group 1
+
+`[...]` one of the characters in the brackets
+
+`-` range indicator
+
+`[x-y]` one of the characters in the range
+
+`[^x-y]` one of the characters not in the range
+
+##### Anchors
+
+`^` start of string or start of line
+
+`$` end of string or end of line
+
+`\b` word boundary
+
+#### grep
+
+Stands for global regex print
+
+Options - `-i` case insensitive, `-w` whole word (not part of larger word), `-r` recursively through subfolders, `-v` inverse search (prints everything but what you searched for),
+
 ### Hard Drive Utilities and Partitioning
+
+
 
 ### Compiling and Installing
 
@@ -206,30 +256,74 @@ Ctrl + b +
 
 ## Pentesting Tools
 
-### nmap
+### Enumeration
+
+#### nmap
 
 nmap [flags] filename ip.ad.dre.ss:port
 
 `nmap -sP 10.0.0.0/24` ping scans the network
+
 `nmap -p 1-65535` - specify ports to be scanned - there are other port options available, such as excluding ports, not randomizing, fast scan, and scanning the top ports
 
 `-sS` SYN scan - the default and most popular scan option because it is relatively stealthy - it never completes a TCP connection and works against any compliant TCP stack
+
 `-sY` SCTP INIT scan - SCTP is a new alternative to TCP and UDP which adds new features and combines many of their characteristics.
+
 `-sN, -sF, -sX` - these scans differentiate between open and closed using a loophole in TCP definition in RFC 793. The xmas scan is the most popular of these, which sends the FIN, PSH, and URG flags "lighting up the packet like a christmas tree"
+
 `-sA` - doesn't determine open or filtered, just used to map out firewall rulesets, determining whether they are stateful or not and which ports are filtered
+
 `--scanflags` allows you to design your own scan by specifying arbitrary TCP flags
+
 `-sZ` is an SCTP cookie echo scan - not as obvious as a
+
 `-v` - verbose output
+
 `-T#` - timing - higher is faster and less accurate
 
 `-sV` - service and version info - more options available
+
 `-o` - output options: includes normal (N), xml (X), script kiddie (S), greppable (G), three major at once (A)
+
 `-O` - OS detection
+
 `-sU` - does a udp scan
+
 `-sC` - uses the default script
+
 `--script <filename>` allows you to write and use scripts written in NSE (nmap scripting engine)
 
 response rate limiting is an effective deterrent to nmapping of your networks, since it makes all scans take much longer to complete.
+
+#### ncat
+
+A tool for reading, writing, redirecting, and encrypting data across the netowrk.
+
+ncat "aims to be a network swiss army knife" - you can:
+
+- use it as a simple tcp/udp/sctp/ssl client for interacting with web, telnet, mail servers, and other TCP/IP network services. ncat allows you to control every character sent and view raw, unfiltered responses
+
+- use it as a simple server for offering services to clients, or simply understanding what clients are up to
+
+- redirect or proxy traffic to other ports or hosts
+
+- encrypt communication with ssl and transport it over ipv4 or ipv6
+
+- create connections, allowing two or more clients to connect to each other through a brokering server, enabling machines behind NAT gateways, and enabling ncat chat mode
+
+ncat has two basic modes - connect mode and listen mode - in connect it initiates a connection to a service which is listening somewhere (client). In listen mode, it waits for incoming connections (server).
+
+Use `ncat -l localhost 8080 < hello.http` to make a simple webserver with hello.http as the document on which it is based
+
+You can use connection brokering to transfer files and to set up multi-user chat rooms.
+
+`--exec /this/file` lets you run a command
+
+a listening ncat may control which hosts connect to it using `--allow` and `--deny`
+
+ncat can route connections through SOCKS or HTTP proxies using `--proxy <proxyhost>:<proxyport> --proxytype [http, socks4, socks5] <host>:<port>`
+
 
 ## Kali
 
