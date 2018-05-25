@@ -123,7 +123,7 @@
 
 ## Topics
 
-**Threat Sources & Events; Adversarial (Fraud / Theft **
+**Threat Sources & Events; Adversarial (Fraud / Theft)**
 
 **Insider Threat**
 
