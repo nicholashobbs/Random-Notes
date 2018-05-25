@@ -1,117 +1,6 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Cybersecurity Notes](#cybersecurity-notes)
-	- [Conventions](#conventions)
-	- [General Linux](#general-linux)
-		- [Basic Commands](#basic-commands)
-		- [Terminal Hotkeys](#terminal-hotkeys)
-		- [Filesystem](#filesystem)
-		- [vim](#vim)
-		- [Searching](#searching)
-			- [regex](#regex)
-				- [Characters](#characters)
-				- [Quantifiers](#quantifiers)
-				- [Logical](#logical)
-				- [Anchors](#anchors)
-			- [grep](#grep)
-			- [find](#find)
-		- [Hard Drive Utilities, Partitioning and Other Stuff](#hard-drive-utilities-partitioning-and-other-stuff)
-		- [Compiling and Installing](#compiling-and-installing)
-		- [Updates](#updates)
-		- [Backups](#backups)
-		- [Network Tools](#network-tools)
-			- [TCP/IP](#tcpip)
-			- [Physical Networking](#physical-networking)
-			- [IP Routing](#ip-routing)
-			- [DNS](#dns)
-			- [SSO](#sso)
-			- [Email](#email)
-			- [Web Hosting](#web-hosting)
-			- [Cloud Computing](#cloud-computing)
-			- [Security](#security)
-			- [Performance Analysis](#performance-analysis)
-			- [Monitoring](#monitoring)
-			- [Virtualization](#virtualization)
-		- [tmux](#tmux)
-	- [Pentesting Tools](#pentesting-tools)
-		- [Enumeration](#enumeration)
-			- [nmap](#nmap)
-			- [ncat](#ncat)
-	- [Kali](#kali)
-		- [Burp Suite](#burp-suite)
-			- [Point-and-Click Scanner](#point-and-click-scanner)
-			- [Spider](#spider)
-			- [Scanner](#scanner)
-			- [Intruder](#intruder)
-			- [Repeater](#repeater)
-			- [Sequencer](#sequencer)
-			- [Decoder](#decoder)
-			- [Comparer](#comparer)
-		- [Recon-ng](#recon-ng)
-		- [Shodan](#shodan)
-		- [Dmitry, Sparta, Netdiscover, Zenmap](#dmitry-sparta-netdiscover-zenmap)
-		- [Metasploit](#metasploit)
-		- [Meterpreter](#meterpreter)
-		- [AV Bypass](#av-bypass)
-		- [Privelege Escalation](#privelege-escalation)
-		- [Packet Capture](#packet-capture)
-		- [MITM](#mitm)
-		- [Social Engineering](#social-engineering)
-		- [BeEF](#beef)
-		- [Password Cracking](#password-cracking)
-		- [Wireless Network Attacks](#wireless-network-attacks)
-		- [Mutillidae](#mutillidae)
-		- [Maintaining Access](#maintaining-access)
-		- [Post Exploitation](#post-exploitation)
-		- [Payloads](#payloads)
-	- [Web App Hacking](#web-app-hacking)
-		- [OWASP Top 10](#owasp-top-10)
-		- [OTGv4](#otgv4)
-		- [Info Gathering](#info-gathering)
-		- [Mapping Application](#mapping-application)
-		- [Organization Tools and Techniques](#organization-tools-and-techniques)
-		- [Types of Attack](#types-of-attack)
-			- [Open Redirect](#open-redirect)
-			- [HTTP Parameter Pollution](#http-parameter-pollution)
-			- [Cross Site Request Forgery](#cross-site-request-forgery)
-			- [HTML Injection](#html-injection)
-			- [CRLF Injection](#crlf-injection)
-			- [XSS](#xss)
-			- [Template Injection](#template-injection)
-			- [SQLi](#sqli)
-			- [SSRF](#ssrf)
-			- [XXE](#xxe)
-			- [Remote Code Execution](#remote-code-execution)
-			- [Buffer Overflow](#buffer-overflow)
-			- [Subdomain Takeover](#subdomain-takeover)
-			- [Race Conditions](#race-conditions)
-			- [IDOR](#idor)
-			- [OAuth](#oauth)
-			- [Application Logic Vulnerabilities](#application-logic-vulnerabilities)
-	- [Security+](#security)
-		- [Security Basics](#security-basics)
-		- [Identity and Access Management](#identity-and-access-management)
-		- [Networking](#networking)
-		- [Securing Networks](#securing-networks)
-		- [Securing Hosts and Data](#securing-hosts-and-data)
-		- [Threats and Vulnerabilities](#threats-and-vulnerabilities)
-		- [Advanced Attacks](#advanced-attacks)
-		- [Risk Management](#risk-management)
-		- [Controls to Protect Assets](#controls-to-protect-assets)
-		- [Cryptography and PKI](#cryptography-and-pki)
-		- [Policies](#policies)
-	- [Map of Bug Bounty Methodology](#map-of-bug-bounty-methodology)
-	- [Web Architecture Section](#web-architecture-section)
-	- [Ippsec Notes](#ippsec-notes)
-	- [Next Steps](#next-steps)
-		- [Automation](#automation)
-		- [Machine Learning Applications](#machine-learning-applications)
 
-<!-- /TOC -->
-
-# Cybersecurity Notes
-
-## Conventions
+# Conventions
 
 To start, I am just going to regurgitate everything into this file in a somewhat organized fashion. Once I get all of my notes down here and have everything condensed, I can go back and make flashcards, find gaps, organize it, and put it into a hierarchy guiding how it should be learned.
 
@@ -120,9 +9,9 @@ Ultimately, the progression of materials should be built as follows - start hard
 `[]` - refers to something that should be replaced by any user-specified value
 `<>` - has other abstract things, such as buttons you should press to execute a command
 
-## General Linux
+# General Linux
 
-### Basic Commands
+## Basic Commands
 
 `pwd` - print working directory (where are you in the filesystem)
 
@@ -207,15 +96,15 @@ Ultimately, the progression of materials should be built as follows - start hard
 `history` - shows you the last 500 commands you have done - you can set this to more by:
 
 
-### Terminal Hotkeys
+## Terminal Hotkeys
 
 `CTRL+A` - jump to beginning of line
 `CTRL+E` - jump to the end of the line
 `CTRL+L` - same as `clear`
 
-### Filesystem
+## Filesystem
 
-### vim
+## vim
 
 Vim is a version of vi with more features. Vi is useful because it is found on almost every distribution of linux and therefore on almost every server. One of the major differences between the two is that you can use arrow keys in vim, whereas vi requires h-left, j-down, k-up, l-right
 
@@ -236,7 +125,7 @@ ce changes until the end of the word - this deletes the rest of the current word
 
 CTRL+G shows you your current location in the file - line x out of total
 
-gg returns you to the beginning of the file and ## G returns you to the ##th line
+gg returns you to the beginning of the file and # G returns you to the ##th line
 
 /thisphrase searches the current file for thisphrase - once you have found it, use n to go to the next instance of the same thing
 
@@ -256,11 +145,11 @@ o opens a line below the cursor and puts you in insert mode - O opens a line abo
 
 set options for vim in ~/.vimrc
 
-### Searching
+## Searching
 
-#### regex
+### regex
 
-##### Characters
+#### Characters
 
 `\d \D` digit/nondigit character
 
@@ -268,7 +157,7 @@ set options for vim in ~/.vimrc
 
 `\s \S` space/nonspace character
 
-##### Quantifiers
+#### Quantifiers
 
 `+` one or more of preceding character
 
@@ -282,7 +171,7 @@ set options for vim in ~/.vimrc
 
 `?` once or none
 
-##### Logical
+#### Logical
 
 `|` OR
 
@@ -300,7 +189,7 @@ set options for vim in ~/.vimrc
 
 `[^x-y]` one of the characters not in the range
 
-##### Anchors
+#### Anchors
 
 `^` start of string or start of line
 
@@ -308,17 +197,17 @@ set options for vim in ~/.vimrc
 
 `\b` word boundary
 
-#### grep
+### grep
 
 Stands for global regex print
 
 Options - `-i` case insensitive, `-w` whole word (not part of larger word), `-r` recursively through subfolders, `-v` inverse search (prints everything but what you searched for),
 
-#### find
+### find
 
 `-name` lets you look for files by name, `-wholename` includes directories in this search.
 
-### Hard Drive Utilities, Partitioning and Other Stuff
+## Hard Drive Utilities, Partitioning and Other Stuff
 
 `umount` unmounts a filesystem
 
@@ -330,39 +219,39 @@ Options - `-i` case insensitive, `-w` whole word (not part of larger word), `-r`
 
 `shred` is used for overwriting a hard disk with random data - this is useful for preventing forensic analysis and file-carving, for instance.
 
-### Compiling and Installing
+## Compiling and Installing
 
-### Updates
+## Updates
 
-### Backups
+## Backups
 
-### Network Tools
+## Network Tools
 
-#### TCP/IP
+### TCP/IP
 
-#### Physical Networking
+### Physical Networking
 
-#### IP Routing
+### IP Routing
 
-#### DNS
+### DNS
 
-#### SSO
+### SSO
 
-#### Email
+### Email
 
-#### Web Hosting
+### Web Hosting
 
-#### Cloud Computing
+### Cloud Computing
 
-#### Security
+### Security
 
-#### Performance Analysis
+### Performance Analysis
 
-#### Monitoring
+### Monitoring
 
-#### Virtualization
+### Virtualization
 
-### tmux
+## tmux
 
 Ctrl + b +
 
@@ -377,11 +266,11 @@ Ctrl + b +
 	& kill window
 	[#] switch to window #
 
-## Pentesting Tools
+# Pentesting Tools
 
-### Enumeration
+## Enumeration
 
-#### nmap
+### nmap
 
 nmap [flags] filename ip.ad.dre.ss:port
 `nmap -sn  10.0.0.0/24` ping scans the network
@@ -418,7 +307,7 @@ nmap [flags] filename ip.ad.dre.ss:port
 
 response rate limiting is an effective deterrent to nmapping of your networks, since it makes all scans take much longer to complete.
 
-#### ncat
+### ncat
 
 A tool for reading, writing, redirecting, and encrypting data across the netowrk.
 
@@ -447,9 +336,9 @@ a listening ncat may control which hosts connect to it using `--allow` and `--de
 ncat can route connections through SOCKS or HTTP proxies using `--proxy <proxyhost>:<proxyport> --proxytype [http, socks4, socks5] <host>:<port>`
 
 
-## Kali
+# Kali
 
-### Burp Suite
+## Burp Suite
 
 Burp is designed to be used alongside a browser. It functions as a HTTP proxy server - all HTTP/HTTPS traffic from your browser passes through burp. Your browser must be configured before doing anything else with burp.
 
@@ -457,7 +346,7 @@ Burp is designed to be used alongside a browser. It functions as a HTTP proxy se
 
 Items that have been requested are shown in black, and other are gray. The core of the workflow is the ability to pass HTTP requests between the various burp tools to carry out particular tasks. Select messages and use the context menu to send the request to another tool.
 
-#### Point-and-Click Scanner
+### Point-and-Click Scanner
 
 
 
@@ -465,144 +354,144 @@ Items that have been requested are shown in black, and other are gray. The core 
 
 Used for automatically crawling an application to discover content and functionality
 
-#### Scanner
+### Scanner
 
 Used for automatically scanning HTTP requests to find security vulnerabilities
 
-#### Intruder
+### Intruder
 
 Lets you perform customized automated attacks
 
-#### Repeater
+### Repeater
 
 Used to manually modify and reissue HTTP requests repeatedly
 
-#### Sequencer
+### Sequencer
 
 Analyze the quality of randomness in application's session tokens
 
-#### Decoder
+### Decoder
 
 Lets you transform bits of application data using common schemes
 
-#### Comparer
+### Comparer
 
 Performs visual comparison of bits of application data to find interesting differences
 
-### Recon-ng
+## Recon-ng
 
-### Shodan
+## Shodan
 
-### Dmitry, Sparta, Netdiscover, Zenmap
+## Dmitry, Sparta, Netdiscover, Zenmap
 
-### Metasploit
+## Metasploit
 
-### Meterpreter
+## Meterpreter
 
-### AV Bypass
+## AV Bypass
 
-### Privelege Escalation
+## Privelege Escalation
 
-### Packet Capture
+## Packet Capture
 
-### MITM
+## MITM
 
-### Social Engineering
+## Social Engineering
 
-### BeEF
+## BeEF
 
-### Password Cracking
+## Password Cracking
 
-### Wireless Network Attacks
+## Wireless Network Attacks
 
-### Mutillidae
+## Mutillidae
 
-### Maintaining Access
+## Maintaining Access
 
-### Post Exploitation
+## Post Exploitation
 
-### Payloads
+## Payloads
 
-## Web App Hacking
+# Web App Hacking
 
-### OWASP Top 10
+## OWASP Top 10
 
-### OTGv4
+## OTGv4
 
-### Info Gathering
+## Info Gathering
 
-### Mapping Application
+## Mapping Application
 
-### Organization Tools and Techniques
+## Organization Tools and Techniques
 
-### Types of Attack
+## Types of Attack
 
-#### Open Redirect
+### Open Redirect
 
-#### HTTP Parameter Pollution
+### HTTP Parameter Pollution
 
-#### Cross Site Request Forgery
+### Cross Site Request Forgery
 
-#### HTML Injection
+### HTML Injection
 
-#### CRLF Injection
+### CRLF Injection
 
-#### XSS
+### XSS
 
-#### Template Injection
+### Template Injection
 
-#### SQLi
+### SQLi
 
-#### SSRF
+### SSRF
 
-#### XXE
+### XXE
 
-#### Remote Code Execution
+### Remote Code Execution
 
-#### Buffer Overflow
+### Buffer Overflow
 
-#### Subdomain Takeover
+### Subdomain Takeover
 
-#### Race Conditions
+### Race Conditions
 
-#### IDOR
+### IDOR
 
-#### OAuth
+### OAuth
 
-#### Application Logic Vulnerabilities
+### Application Logic Vulnerabilities
 
-## Security+
+# Security+
 
-### Security Basics
+## Security Basics
 
-### Identity and Access Management
+## Identity and Access Management
 
-### Networking
+## Networking
 
-### Securing Networks
+## Securing Networks
 
-### Securing Hosts and Data
+## Securing Hosts and Data
 
-### Threats and Vulnerabilities
+## Threats and Vulnerabilities
 
-### Advanced Attacks
+## Advanced Attacks
 
-### Risk Management
+## Risk Management
 
-### Controls to Protect Assets
+## Controls to Protect Assets
 
-### Cryptography and PKI
+## Cryptography and PKI
 
-### Policies
+## Policies
 
-## Map of Bug Bounty Methodology
+# Map of Bug Bounty Methodology
 
-## Web Architecture Section
+# Web Architecture Section
 
-## Ippsec Notes
+# Ippsec Notes
 
-## Next Steps
+# Next Steps
 
-### Automation
+## Automation
 
-### Machine Learning Applications
+## Machine Learning Applications
