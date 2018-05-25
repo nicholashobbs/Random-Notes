@@ -184,11 +184,11 @@
 
 **Security Awareness**
 
-**Social Engineering (Email / Phishing / In-Person / Telephony
+**Social Engineering (Email / Phishing / In-Person / Telephony)**
 
 ## Tools
 
- Lock picking
+**Lock picking**
 
 # Defense, Detection, and Architecture
 
@@ -218,7 +218,7 @@
 
 **Intrusion Prevention System (IPS)**
 
-**Data Loss Prevention (DLP)
+**Data Loss Prevention (DLP)**
 
 ## Tools
 
@@ -226,17 +226,17 @@
 
 **IPtables**
 
-**Elastic Stack***
+**Elastic Stack**
 
-**Palo Alto***
+**Palo Alto**
 
-**OpenVPN***
+**OpenVPN**
 
-**Docker***
+**Docker**
 
-**LogRhythm***
+**LogRhythm**
 
-**QRadar*
+**QRadar**
 
 # Security Hardening
 
