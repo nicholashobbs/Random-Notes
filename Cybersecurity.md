@@ -273,8 +273,7 @@ Ctrl + b +
 #### nmap
 
 nmap [flags] filename ip.ad.dre.ss:port
-
-`nmap -sP 10.0.0.0/24` ping scans the network
+`nmap -sn 10.0.0.0/24` ping scans the network
 
 `nmap -p 1-65535` - specify ports to be scanned - there are other port options available, such as excluding ports, not randomizing, fast scan, and scanning the top ports
 
