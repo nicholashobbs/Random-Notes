@@ -270,7 +270,7 @@
 
 **CentOS**
 
-**Debian / Ubuntu
+**Debian / Ubuntu**
 
 # Cryptography
 
@@ -294,7 +294,7 @@
 
 **Key Management: Public Key Infrastructure**
 
-**Password Cracking: Rainbow Tables
+**Password Cracking: Rainbow Tables**
 
 ## Tools
 
@@ -308,7 +308,7 @@
 
 **Bcrypt**
 
-**Hydra
+**Hydra**
 
 # Vulnerability Management and Offensive Security
 
@@ -352,9 +352,9 @@
 
 **Discover scripts**
 
-**Terraform***
+**Terraform**
 
-**Qualys*
+**Qualys**
 
 # Incident Response and Forensics
 
@@ -374,4 +374,4 @@
 
 **FireEye Redline (Mandiant)**
 
-**Volatility
+**Volatility**
