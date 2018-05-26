@@ -150,3 +150,7 @@ In Python, use `sortedcontainers` for sorted sets and dictionaries. In EPI, the 
 - `minitem()` yields the smallest key-value pair and `maxitem()` yields the largest
 - `minkey()` yields the smallest key and `maxkey()` yields the largest
 - `pop_min()` removes and returns the smallest key-value pair and `pop_max()` removes and returns the largest
+
+# Atom
+
+Ctrl Shift M for Markdown Preview (stop pointless commits and pushes to github)
