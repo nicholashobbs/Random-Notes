@@ -256,3 +256,30 @@ Linux From Scratch
 TOOLS
 
 netcat ping traceroute curl netstat dhclient nslookup dig wireshark tcpdump whois nginx mysql virtualenv pip awscli vpc ec2 ami rds dynamo elasticache redshift s3 openIOC virustotal abuse.ch passive dns av/ids/fw/siem fireeye, threatconnect, crowdstrike, recorded future
+
+----------------------------------------------------
+PDSA - plan, do, study, act
+
+Deming: design of products to imporve service, higher level of uniform quality, improvement of testing in workplace and research centers, greater sales through global markets
+
+System of Profound Knowledge: Appreciating a System, Understanding variation, psychology, epistemology
+
+Organizations should focus on quality=results of efforts/total costs
+
+when people focus first and foremost on costs, they tend to rise and quality declines.
+
+terraform provider is used as a reference to the target environment .tf
+
+.ova is an instance with virtual files, whereas a .vmdk is just the virtual hard drive
+
+PTES - pre engagement intelligence gathering, threat modeling, vulnerability analysis, exploitation, post-exploitation, reporting
+
+Hacking Methodology
+
+kubernetes can often be unsecured, and it is often used to manage multiple docker containers
+
+everything nessus does, netmap is capable of
+
+Breakdown labs step by step - use instructions, not commands - take the terminology and make a lab guide/cheatsheet
+
+LAIR framework
