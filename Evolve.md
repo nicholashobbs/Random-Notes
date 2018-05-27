@@ -310,6 +310,12 @@
 
 **Hydra**
 
+Hydra can be used to brute force usernames, passwords, and other fields.
+
+`hydra -L wordlist.for.un.uniq -p password <host ip>`
+
+-L gives a list to try for login, -l is for username, -p is for password, -P is a list to try for passwords,  
+
 # Vulnerability Management and Offensive Security
 
 ## Topics
@@ -341,6 +347,10 @@
 **Metasploit**
 
 **Nikto**
+
+Very effective, but not stealthy - designed for security testing
+
+use `nikto -h ho.st.ip.ad/domain.name` to scan a website. The output tells you which websites were found and links to vulnerabilities you can research on OSVDB.
 
 **Nessus**
 

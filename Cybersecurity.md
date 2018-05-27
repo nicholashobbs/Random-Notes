@@ -307,6 +307,8 @@ nmap [flags] filename ip.ad.dre.ss:port
 
 response rate limiting is an effective deterrent to nmapping of your networks, since it makes all scans take much longer to complete.
 
+once you have nmapped, look for alternative names/DNS for help with where to use dirb, etc.
+
 ### ncat
 
 A tool for reading, writing, redirecting, and encrypting data across the netowrk.
@@ -335,6 +337,9 @@ a listening ncat may control which hosts connect to it using `--allow` and `--de
 
 ncat can route connections through SOCKS or HTTP proxies using `--proxy <proxyhost>:<proxyport> --proxytype [http, socks4, socks5] <host>:<port>`
 
+### nc
+
+`nc -nvlp 1234` starts listening on port 1234
 
 # Kali
 
@@ -390,7 +395,11 @@ Performs visual comparison of bits of application data to find interesting diffe
 
 ## AV Bypass
 
-## Privelege Escalation
+## Privilege Escalation
+
+`find / -perm -4000 -user root -exec ls -ld {} \; 2> /dev/null` ???
+
+`nmap --interactive`
 
 ## Packet Capture
 
@@ -419,6 +428,11 @@ Performs visual comparison of bits of application data to find interesting diffe
 ## OTGv4
 
 ## Info Gathering
+
+`dirb http://ip`
+
+wpscan - `wpscan --url http://testhere --enumerate u`
+
 
 ## Mapping Application
 

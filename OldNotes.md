@@ -283,3 +283,6 @@ everything nessus does, netmap is capable of
 Breakdown labs step by step - use instructions, not commands - take the terminology and make a lab guide/cheatsheet
 
 LAIR framework
+
+
+upload a php payload  - php reverse shell: http://pentestmonkey.net/tools/web-shells/php-reverse-shell
