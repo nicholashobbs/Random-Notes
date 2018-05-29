@@ -286,3 +286,136 @@ LAIR framework
 
 
 upload a php payload  - php reverse shell: http://pentestmonkey.net/tools/web-shells/php-reverse-shell
+
+
+---------------------------------------------
+
+bus topology, star topology
+
+thinnet/thicknet - types of network cables with 10 Mbps transfer rate
+
+rg-8,6 etc, mdi-x
+
+802.3
+
+cat3 - phone/voice cable standard
+
+cat5/100BaseT - fast ethernet, rj-45, 100 Mbps, 100 meters
+
+cat 5e - 1 Gbps, 802.3ab, rj-45, 100m
+
+cat6/10GbaseT- 500 Mhz, 10 GBps,
+
+1000BaseSX / 802.3z- gigabit ethernet over fiber, 1000 MBps multimode fiber
+
+10GBaseSR - multimode fiber
+
+.... way more types of cables to memorize or learn about
+
+802.5 Token Ring - network nodes must wait for token before transmitting
+
+NIS - network information services - a central list of net objects, users, groups, printers, etc
+
+NetBEUI - netbios extended user interface - a non routable protocol for small netowkrs
+
+segment - data at layer 4 (transport)
+
+packet - data at layer 3 (network)
+
+frame - data at layer 2 (data link)
+
+bits/signal - data at layer 1 (physical)
+
+TCP - transmission control protocol - layer 4
+
+IP - layer 3
+
+MAC - layer 2 address - 48 bits, 12 digit hexadecimal
+
+IPX - internetwork packet exchange - routable protocol, unreliable and connectionless (layer 3)
+
+SMTP - simple mail transfer protocol - port 25, tcp
+
+802.11a - wireless network protocol, also 802.11b,g, n, ac
+
+802.2 - logical link control
+
+simplex - communication channel in one direction only
+
+half-duplex - communication only one direction at a time
+
+hub - layer 1 repeater - data sent to all ports on the hub
+
+mau - multistation access units - token ring device to attach multiple network stations in star topology - cycle through ports in logical ring
+
+bridge - splits network segments based on MAC address table creating separate collision domains
+
+switch - there are a number of types on a number of layers
+
+router - reads packet header to determine preferred route for data - layer 3 - it is a boundary where each port separates broadcast and collision domains - when the router doesnt have a route, it discards the packet.
+
+HIDS - host based intrusion detection
+
+NIDS - network intrusion detection system
+
+CSU - channel service unit - converts serial signals into digital signals
+
+ISDN - integrated services digital network BRI basic rate, PRI faste - TA terminal adapter used to connect computer to isdn network
+
+punchdown block - electrical connection where copper wires are punched down into short open ended slots
+
+patch panel - a number of jacks for connecting circuits in a flexible and convenient way
+
+class a/b/c address - 1-126, 128-191, 192-223 default netmask for 255.0.0.0/255.255.0.0/255.255.255/0
+
+ftp - port 20 for data, 21 for control
+
+ssh - port 22
+
+telnet - terminal sessions - port 23
+
+dns - port 53
+
+dhcp - port 67 server destination, 68 used by client
+
+tftp - trivial ftp, udp port 69
+
+http - port 80
+
+pop3 - port 110
+
+nntp - network news - port 119
+
+ntp - network time protocol - port 123
+
+IMAP4 - internet message application protocol v4 - port 143
+
+secure HTTP - port 443
+
+rdp - remote desktop protocol tcp and udp on port 3389
+
+smb - server message block, a common internet file system - application layer protocol used to share access to files, printers, windows computers on port 445
+
+CHAP - challenge handshake authentication protocol - lcp establishes ppp link, authenticator sends challenge, peer responds with value calculated using one-way hash to combine key with secret (password), authenticator checks hash value with secret and acknowledges the authentication if correct
+
+DHCP scope - pool of IPs which dhcp can hand out to clients
+
+mx - mail exchanger record
+
+soa - start of authority record
+
+hosts file - maps hostnames to ip addresses (predates dhcp)
+
+samba - linux implementation of smb/cifs allows file and print sharing between windows and linux
+
+hping - uses tcp packets to ping - can be used to test open ports and firewalls that would normally block icmp
+
+
+
+5-4-3 rule - 10base2 and 10base5 collision domains - max of 5 network segments in total, joined by 4 repeaters, with only 3 segments containing active sending nodes
+
+fiber optic cables - ST is straight tip, sc is subscriber
+
+MPLS - multiprotocol label switching - avoids complex lookups in routing tables by assigning labels rather than analyzing packet headers
+
+CSMA - carrier sense multiple access with collision detection allows systems to sense when the wire is free
