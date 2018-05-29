@@ -309,6 +309,14 @@ response rate limiting is an effective deterrent to nmapping of your networks, s
 
 once you have nmapped, look for alternative names/DNS for help with where to use dirb, etc.
 
+### masscan
+
+`masscan -p 22,1000-2000 10.0.0.0/8` to scan ports 22, 1000-2000 on the 10.0.0.0/8 network
+
+`--echo -> file.conf` dumps current configuration
+
+`--banners --heartbleed` etc help you set banners. ....
+
 ### ncat
 
 A tool for reading, writing, redirecting, and encrypting data across the netowrk.
