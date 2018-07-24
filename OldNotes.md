@@ -418,4 +418,16 @@ fiber optic cables - ST is straight tip, sc is subscriber
 
 MPLS - multiprotocol label switching - avoids complex lookups in routing tables by assigning labels rather than analyzing packet headers
 
+rfceditor.org
+cymon.io - open source threat intelligence
+risky business podcast
+Awesome-Hacking on github
+hack.me
+arch linux wiki
+overthewire.com
+pentestmonkey
+hacksplaining
+pentestcloud
+
+
 CSMA - carrier sense multiple access with collision detection allows systems to sense when the wire is free
