@@ -142,5 +142,4 @@ After I tried `shorewall start`, I started getting some very confusing messages.
 
 A martian packet is a packet which comes from an impossible source - for example something from an RFC 1918 address which is routed accross the internet, or any packet with localnet IP on an interface which is not the loopback.
 
-
 `nf_conntrack: default automatic helper assignment has been turned off for security reasons and CT-based  firewall rule not found. Use the iptables CT target to attach helpers instead.`
