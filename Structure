@@ -1,157 +1,145 @@
 Computer
-  Data Structures
-    Primitive Types
-    Arrays
-    Strings
-    Lists
-    Stacks
-    Queues
-    Binary Trees
-    Heaps
-    Searching
-    Hash Tables
-    Sorting
-    Binary Search Trees
-    Recursion
-    Dynamic Programming
-    Greedy Algorithms and Invariants
-    Graphs
-  Algorithms
-    Time and Space Complexity
-    Operations on Data Structures
-    Array Sorting Algorithms
-  CS Fundamentals
-  Database Design
-    Overview, Pros and Cons of Relational/Non-relational DBs
-    SQL
-      Primary Keys
-      Clustered/Nonclustered Index
-      Stored Procedures
-      Joins
-      Views
-      Functions
-      Table Variables vs Temp Tables vs Global Temp Tables
-      Transactions
-      Locking
-      Dynamic SQL
-    NoSQL
-  Linux
-    Basic Commands and Hotkeys
-    Filesystem
-    Searching
-      Regex
-      Grep
-      Find
-      Awk
-      Sed
-    Hard Drive Utilities
-    Partitioning
-    Terminal Tools
-      Tmux
-      vi/vim
-  Networking
-    Concepts
-      Vocabulary
-      Acronyms
-      Frameworks
-        NIST
-    Tools
-      Wireshark
-      Tcpdump
-      Ncat
-      Netcat
-      Netstat
-      Dig
-      Nslookup
-      Whois
-      ping
-  Cybersecurity
-    Concepts
-      OSI Model
-      TCP/IP Model
-      Network Protocols
-        DNS
-        DHCP
-        TCP
-        UDP
-        ICMP
-        NAT/PAT
-    Tools
-      Nmap
-      Masscan
-      Ncat
-      Nc
-      wireshark
-      Burp suite
-      Recon-ng
-      Shodan
-      Metasploit
-    Web App Hacking
-  Python
-    Tools and Basics
-      Variables
-      Python 2 vs 3
-      Typing
-      Io
-      Re
-      Collections
-      Regex
-      Data Types
-      Conversion
-      IPython Notebook Shortcuts
-      Random Tools
-        WHAT IS if = “__name__” = “__main__”
-    Pandas
-      Data Frames
-      Reshaping Data
-      Subset Observations
-      Subset Variables
-      Logic
-      Regex
-      Method Chaining
-    Numpy
+  Concepts
+    Data Structures
+      Primitive Types
       Arrays
-      Placeholders
-      Io
-      .info
-      Data Types
-      Math on Arrays
-      Copy/Sort Arrays
-      Subset, Slice, Index
-      Array Manipulation
-      Aggregate Functions
-    Scipy
-      Decomposition
-      Functions
-      Create Space
-      Basic ??
-      Create Matrices
-      Meshgrid???
-      Polynomials
-      Shape Manipulation
-      Vectorizing
-      Type Handling
-    Matplotlib
-      Data Preparation
-      Creating Plots
-      Customization
-    Seaborn
-      Show/Save/Close/Clear
-      Types of Plot (examples)
-      Aesthetics
-      Import Data
-      Customization
-    SQLAlchemy
-    Beautifulsoup
-    Sklearn
-    Tensorflow
-  R
-    Tools and Basics
-    Tidyverse: dpylr, readr, tidyr, ggplot2, shiny
-    Rmd Tools
-    Causalimpact
-  Other Tools
-    Github
+      Strings
+      Lists
+      Stacks
+      Queues
+      Binary Trees
+      Heaps
+      Searching
+      Hash Tables
+      Sorting
+      Binary Search Trees
+      Recursion
+      Dynamic Programming
+      Greedy Algorithms and Invariants
+      Graphs
+    Algorithms
+      Time and Space Complexity
+      Operations on Data Structures
+      Array Sorting Algorithms
+    CS Fundamentals
+    Database Design
+  Tools
+    Linux
+      Commandline
+        Hotkeys
+      Filesystem
+      Searching
+        Regex
+        Grep
+        Find
+        Awk
+        Sed
+      Hard Drive Utilities
+      Partitioning
+      Terminal Tools
+        Tmux
+        vi/vim
+    Networking
+      Concepts
+        Vocabulary
+        Acronyms
+        Frameworks
+          NIST
+      Tools
+        Wireshark
+        Tcpdump
+        Ncat
+        Netcat
+        Netstat
+        Dig
+        Nslookup
+        Whois
+        ping
+    Security
+      Concepts
+        OSI Model
+        TCP/IP Model
+        Network Protocols
+          DNS
+          DHCP
+          TCP
+          UDP
+          ICMP
+          NAT/PAT
+      Tools
+        Nmap
+        Masscan
+        Ncat
+        Nc
+        wireshark
+        Burp suite
+        Recon-ng
+        Shodan
+        Metasploit
+      Web App Hacking
+    Python
+      Tools and Basics
+        Variables
+        Python 2 vs 3
+        Typing
+        Io
+        Re
+        Collections
+        Regex
+        Data Types
+        Conversion
+        IPython Notebook Shortcuts
+        Random Tools
+          WHAT IS if = “__name__” = “__main__”
+      Pandas
+        Data Frames
+        Reshaping Data
+        Subset Observations
+        Subset Variables
+        Logic
+        Regex
+        Method Chaining
+      Numpy
+        Arrays
+        Placeholders
+        Io
+        .info
+        Data Types
+        Math on Arrays
+        Copy/Sort Arrays
+        Subset, Slice, Index
+        Array Manipulation
+        Aggregate Functions
+      Scipy
+        Decomposition
+        Functions
+        Create Space
+        Basic ??
+        Create Matrices
+        Meshgrid???
+        Polynomials
+        Shape Manipulation
+        Vectorizing
+        Type Handling
+      Matplotlib
+        Data Preparation
+        Creating Plots
+        Customization
+      Seaborn
+        Show/Save/Close/Clear
+        Types of Plot (examples)
+        Aesthetics
+        Import Data
+        Customization
+      SQLAlchemy
+      Beautifulsoup
+      Sklearn
+      Tensorflow
+    R
+      Tools and Basics
+      Tidyverse: dpylr, readr, tidyr, ggplot2, shiny
+    SQL
+    NoSQL
 
 Math
   Calculus
