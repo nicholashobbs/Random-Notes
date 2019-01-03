@@ -20,7 +20,7 @@
 ### Methodology
 
 * The goal is to use survey data along with MODIS satellite data to try to find techniques which get close to the results of the NDVI (Normalized Difference Vegetation Index).
-* The NDVI works by measuring the ratio of visible light vs near infrared light (0.7-1.1 $\mu$m ).
+* The NDVI works by measuring the ratio of visible light(0.4-0.7 $\mu$m), which is strongly absorbed by chlorophyl for photosynthesis, vs near infrared light (0.7-1.1 $\mu$m), which is strongly reflected by the cell structure of leaves. $NDVI = \frac{NIR - Red}{NIR + Red}$
 * So I am trying to get inferences from the survey questions and images themselves, and then test those against the results of the MODIS data and the farmer's estimation of the land's carrying capacity.
 * When the researchers originally started having issues with the dataset, they tried to get mechanical turks to rate the carrying capacity. This is another questionably accurate source of data but another thing to use for truth checking and to come up with ideas.
 * To start I created an efficient way to preview a few random images from whatever subset of the data I select without downloading all 120,000.
