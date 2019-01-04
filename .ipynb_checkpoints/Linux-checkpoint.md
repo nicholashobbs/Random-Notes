@@ -1,4 +1,15 @@
-=
+# Linux
+
+
+# Conventions
+
+To start, I am just going to regurgitate everything into this file in a somewhat organized fashion. Once I get all of my notes down here and have everything condensed, I can go back and make flashcards, find gaps, organize it, and put it into a hierarchy guiding how it should be learned.
+
+Ultimately, the progression of materials should be built as follows - start hard and jump to easy, but also cover things progressively as you go. Start with a high level description of what something is, then move on to more detail as you go. First create a complete listing of the things which you now know and want to learn before the end of class, and then transform it into a complete lesson plan whereby students are initially introduced to everything and told the capabilities of different tools - as time goes by they will be introduced and gradually exposed to the deeper levels of these tools.
+
+`[]` - refers to something that should be replaced by any user-specified value
+`<>` - has other abstract things, such as buttons you should press to execute a command
+
 # General Linux
 
 ## Basic Commands
